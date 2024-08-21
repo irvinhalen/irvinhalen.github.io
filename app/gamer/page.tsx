@@ -1,19 +1,19 @@
 import Image from 'next/image';
-import Smash from '../../public/SuperSmashBros.svg';
+import Smash from '../../public/Smash/SuperSmashBros.svg';
     import Smash1 from '../../public/Smash/Smash1.jpg';
     import Smash2 from '../../public/Smash/Smash2.jpg';
     import Smash3 from '../../public/Smash/Smash3.jpg';
     import Smash4 from '../../public/Smash/Smash4.jpg';
     import Smash5 from '../../public/Smash/Smash5.jpg';
-import Pokémon from '../../public/Pokémon.svg';
+import Pokémon from '../../public/Pokémon/Pokémon.svg';
     import Pokémon1 from '../../public/Pokémon/Pokémon1.png';
     import Pokémon2 from '../../public/Pokémon/Pokémon2.png';
-import Mario from '../../public/Mario.svg';
+import Mario from '../../public/Mario/Mario.svg';
     import Mario1 from '../../public/Mario/Mario1.jpg';
-import Zelda from '../../public/Zelda.svg';
+import Zelda from '../../public/Zelda/Zelda.svg';
     import Zelda1 from '../../public/Zelda/Zelda1.jpg';
     import Zelda2 from '../../public/Zelda/Zelda2.jpg';
-import Minecraft from '../../public/Minecraft.svg';
+import Minecraft from '../../public/Minecraft/Minecraft.svg';
     import Minecraft1 from '../../public/Minecraft/Minecraft1.jpg';
 import { Metadata } from 'next';
 

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Smash from '../public/SuperSmashBros.svg';
+import Smash from '../public/Smash/SuperSmashBros.svg';
 
 export default function Home() {
   return (
