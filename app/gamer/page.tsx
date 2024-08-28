@@ -9,7 +9,8 @@ import Pokémon from '../../public/Pokémon/Pokémon.svg';
     import Emerald from '../../public/Pokémon/Emerald.png';
     import ORAS from '../../public/Pokémon/ORAS.png';
     import GO from '../../public/Pokémon/GO.png';
-    import Reverse from '../../public/Pokémon/Reverse.jpg';
+    import MysteryDungeon from '../../public/Pokémon/MysteryDungeon.png';
+    import Reverse from '../../public/Pokémon/Reverse.png';
 import Mario from '../../public/Mario/Mario.svg';
     import Mario1 from '../../public/Mario/Mario1.jpg';
 import Zelda from '../../public/Zelda/Zelda.svg';
@@ -57,12 +58,12 @@ export default function Page() {
                         <div className='flip-card-inner'>
                             <div className='flip-card-front'>
                                 <div className="flex flex-row justify-center items-center">
-                                    <Image src={Emerald} layout='fill' alt='Emerald' objectFit='cover' objectPosition='center' />
+                                    <Image src={Reverse} layout='fill' alt='back side of a Pokémon card' objectFit='cover' objectPosition='center' />s
                                 </div>
                             </div>
                             <div className='flip-card-back overflow-hidden'>
                                 <div className="flex flex-row justify-center items-center">
-                                    <Image src={Reverse} layout='fill' alt='back side of a Pokémon card' objectFit='cover' objectPosition='center' />
+                                    <Image src={Emerald} layout='fill' alt='Emerald' objectFit='cover' objectPosition='center' />
                                 </div>
                             </div>
                         </div>
@@ -72,13 +73,29 @@ export default function Page() {
                     <div className='flip-card h-72 w-52 relative'>
                         <div className='flip-card-inner'>
                             <div className='flip-card-front'>
+                                <div className="flex flex-row justify-center items-center">
+                                    <Image src={Reverse} layout='fill' alt='back side of a Pokémon card' objectFit='cover' objectPosition='center' />
+                                </div>
+                            </div>
+                            <div className='flip-card-back rounded overflow-hidden'>
                                 <div className="flex flex-row justify-center items-center">
                                     <Image src={ORAS} layout='fill' alt='Emerald' objectFit='cover' objectPosition='center' />
                                 </div>
                             </div>
-                            <div className='flip-card-back rounded overflow-hidden'>
+                        </div>
+                    </div>
+                </div>
+                <div className='w-1/3 flex justify-center'>
+                    <div className='flip-card h-72 w-52 relative'>
+                        <div className='flip-card-inner'>
+                            <div className='flip-card-front'>
                                 <div className="flex flex-row justify-center items-center">
                                     <Image src={Reverse} layout='fill' alt='back side of a Pokémon card' objectFit='cover' objectPosition='center' />
+                                </div>
+                            </div>
+                            <div className='flip-card-back rounded overflow-hidden'>
+                                <div className="flex flex-row justify-center items-center">
+                                    <Image src={GO} layout='fill' alt='Emerald' objectFit='cover' objectPosition='center' />
                                 </div>
                             </div>
                         </div>
@@ -89,12 +106,12 @@ export default function Page() {
                         <div className='flip-card-inner'>
                             <div className='flip-card-front'>
                                 <div className="flex flex-row justify-center items-center">
-                                    <Image src={GO} layout='fill' alt='Emerald' objectFit='cover' objectPosition='center' />
+                                    <Image src={Reverse} layout='fill' alt='back side of a Pokémon card' objectFit='cover' objectPosition='center' />
                                 </div>
                             </div>
                             <div className='flip-card-back rounded overflow-hidden'>
                                 <div className="flex flex-row justify-center items-center">
-                                    <Image src={Reverse} layout='fill' alt='back side of a Pokémon card' objectFit='cover' objectPosition='center' />
+                                    <Image src={MysteryDungeon} layout='fill' alt='Emerald' objectFit='cover' objectPosition='center' />
                                 </div>
                             </div>
                         </div>
