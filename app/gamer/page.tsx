@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Smash from '../../public/Smash/SuperSmashBros.svg';
     import Smash_64 from '../../public/Smash/64.jpg';
     import Smash_Melee from '../../public/Smash/Melee.jpg';
@@ -18,6 +17,7 @@ import Zelda from '../../public/Zelda/Zelda.svg';
     import Zelda2 from '../../public/Zelda/Zelda2.jpg';
 import Minecraft from '../../public/Minecraft/Minecraft.svg';
     import Minecraft1 from '../../public/Minecraft/Minecraft1.jpg';
+import Image from 'next/image';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -160,6 +160,12 @@ export default function Page() {
                         </p>
                     </div>
                 </div> */}
+            </div>
+            <div className='w-96'>
+                <video height='240' width='320' autoPlay loop>
+                    <source src='/Zelda/SheikahSlate.mp4' type='video/mp4' />
+                    A video of the Sheikah Slate.
+                </video>
             </div>
             <div className='flex flex-row gap-5 h-80 w-full'>
                 <div className="flex flex-row max-w rounded overflow-hidden shadow-lg justify-center items-center w-4/5 relative">
