@@ -28,16 +28,16 @@ export default function Page() {
     return (
         <main className="flex min-h-screen flex-col gap-5 items-center justify-between p-24">
             <div className='flex flex-row gap-5 h-64 w-full'>
-                <div className='flip-card max-w w-1/3 rounded overflow-hidden shadow-lg relative'>
+                <div className='max-w w-1/2 rounded overflow-hidden shadow-lg relative'>
                     <div className="flex flex-row justify-center items-center h-full">
                         <Image src={Smash_Ultimate} alt='Smash' layout='fill' objectFit='cover' objectPosition='center' />
                     </div>
                 </div>
-                <div className="flex flex-row max-w rounded shadow-lg justify-center items-center h-full w-1/3 relative trigger">
+                {/* <div className="flex flex-row max-w rounded shadow-lg justify-center items-center h-full w-1/3 relative trigger">
                     <Image src={Smash} alt='Super Smash Bros. logo' loading='lazy' objectPosition='center' />
                     <div className='void absolute top-0 bottom-0 left-0 right-0' />
-                </div>
-                <div className='flip-card max-w w-1/3 rounded overflow-hidden shadow-lg relative'>
+                </div> */}
+                <div className='max-w w-1/2 rounded overflow-hidden shadow-lg relative'>
                     <div className="flex flex-row justify-center items-center h-full">
                         <Image src={Smash_4} alt='Smash' loading='lazy' layout='fill' objectFit='cover' objectPosition='center' className='z-10' />
                     </div>
@@ -52,9 +52,26 @@ export default function Page() {
                     </div>
                 </div> */}
             </div>
-            <div className='flex flex-row gap-5 h-full w-full'>
-                <div className='w-1/3 flex justify-center'>
-                    <div className='flip-card h-72 w-52 relative'>
+            <div className='flex flex-row gap-5 h-64 w-full'>
+                <div className='max-w w-1/3 rounded overflow-hidden shadow-lg relative'>
+                    <div className="flex flex-row justify-center items-center h-full">
+                        <Image src={Smash_Brawl} alt='Smash' layout='fill' objectFit='cover' objectPosition='center' />
+                    </div>
+                </div>
+                <div className='max-w w-1/3 rounded overflow-hidden shadow-lg relative'>
+                    <div className="flex flex-row justify-center items-center h-full">
+                        <Image src={Smash_Melee} alt='Smash' layout='fill' objectFit='cover' objectPosition='center' />
+                    </div>
+                </div>
+                <div className='max-w w-1/3 rounded overflow-hidden shadow-lg relative'>
+                    <div className="flex flex-row justify-center items-center h-full">
+                        <Image src={Smash_64} alt='Smash' layout='fill' objectFit='cover' objectPosition='center' />
+                    </div>
+                </div>
+            </div>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 h-80 w-full'>
+                <div className='w-full flex justify-center'>
+                    <div className='flip-card h-full w-full relative'>
                         <div className='flip-card-inner'>
                             <div className='flip-card-front'>
                                 <div className="flex flex-row justify-center items-center">
@@ -69,8 +86,8 @@ export default function Page() {
                         </div>
                     </div>
                 </div>
-                <div className='w-1/3 flex justify-center'>
-                    <div className='flip-card h-72 w-52 relative'>
+                <div className='w-full flex justify-center'>
+                    <div className='flip-card h-full w-full relative'>
                         <div className='flip-card-inner'>
                             <div className='flip-card-front'>
                                 <div className="flex flex-row justify-center items-center">
@@ -85,8 +102,8 @@ export default function Page() {
                         </div>
                     </div>
                 </div>
-                <div className='w-1/3 flex justify-center'>
-                    <div className='flip-card h-72 w-52 relative'>
+                <div className='w-full flex justify-center'>
+                    <div className='flip-card h-full w-full relative'>
                         <div className='flip-card-inner'>
                             <div className='flip-card-front'>
                                 <div className="flex flex-row justify-center items-center">
@@ -101,8 +118,8 @@ export default function Page() {
                         </div>
                     </div>
                 </div>
-                <div className='w-1/3 flex justify-center'>
-                    <div className='flip-card h-72 w-52 relative'>
+                <div className='w-full flex justify-center'>
+                    <div className='flip-card h-full w-full relative'>
                         <div className='flip-card-inner'>
                             <div className='flip-card-front'>
                                 <div className="flex flex-row justify-center items-center">
@@ -161,8 +178,8 @@ export default function Page() {
                     </div>
                 </div> */}
             </div>
-            <div className='w-96'>
-                <video height='240' width='320' autoPlay loop>
+            <div className='w-full rounded overflow-hidden'>
+                <video muted autoPlay loop>
                     <source src='/Zelda/SheikahSlate.mp4' type='video/mp4' />
                     A video of the Sheikah Slate.
                 </video>
