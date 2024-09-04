@@ -44,8 +44,6 @@ body {
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  border-radius: 25px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .flip-card:hover .flip-card-inner {
@@ -63,16 +61,17 @@ body {
   font-size: 60px;
   border-radius: 5px;
   backface-visibility: hidden;
+  filter: drop-shadow(4px 0 8px rgb(0, 0, 0, 0.2));
 }
 
 .flip-card-front {
-  background-color: white;
+  background-color: transparent;
   color: black;
   overflow: hidden;
 }
 
 .flip-card-back {
-  background-color: black;
+  background-color: transparent;
   color: white;
   transform: rotateY(180deg);
 }

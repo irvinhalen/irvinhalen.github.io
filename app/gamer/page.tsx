@@ -73,32 +73,32 @@ export default function Page() {
                 <div className='w-full flex justify-center'>
                     <div className='flip-card w-full relative'>
                         <div className='flip-card-inner'>
-                            <Image src={Reverse} layout='fill' alt='back side of a Pokémon card' objectFit='cover' objectPosition='center' className='flip-card-front' />
-                            <Image src={Emerald} layout='fill' alt='Emerald' objectFit='cover' objectPosition='center' className='flip-card-back overflow-hidden' />
+                            <Image src={Reverse} layout='fill' alt='back side of a Pokémon card' objectFit='contain' objectPosition='center' className='flip-card-front' />
+                            <Image src={Emerald} layout='fill' alt='Emerald' objectFit='contain' objectPosition='center' className='flip-card-back overflow-hidden' />
                         </div>
                     </div>
                 </div>
                 <div className='w-full flex justify-center'>
                     <div className='flip-card w-full relative'>
                         <div className='flip-card-inner'>
-                            <Image src={Reverse} layout='fill' alt='back side of a Pokémon card' objectFit='cover' objectPosition='center' className='flip-card-front' />
-                            <Image src={ORAS} layout='fill' alt='Delta Emerald' objectFit='cover' objectPosition='center' className='flip-card-back overflow-hidden' />
+                            <Image src={Reverse} layout='fill' alt='back side of a Pokémon card' objectFit='contain' objectPosition='center' className='flip-card-front' />
+                            <Image src={ORAS} layout='fill' alt='Delta Emerald' objectFit='contain' objectPosition='center' className='flip-card-back overflow-hidden' />
                         </div>
                     </div>
                 </div>
                 <div className='w-full flex justify-center'>
                     <div className='flip-card w-full relative'>
                         <div className='flip-card-inner'>
-                            <Image src={Reverse} layout='fill' alt='back side of a Pokémon card' objectFit='cover' objectPosition='center' className='flip-card-front' />
-                            <Image src={GO} layout='fill' alt='GO' objectFit='cover' objectPosition='center' className='flip-card-back overflow-hidden' />
+                            <Image src={Reverse} layout='fill' alt='back side of a Pokémon card' objectFit='contain' objectPosition='center' className='flip-card-front' />
+                            <Image src={GO} layout='fill' alt='GO' objectFit='contain' objectPosition='center' className='flip-card-back overflow-hidden' />
                         </div>
                     </div>
                 </div>
                 <div className='w-full flex justify-center'>
                     <div className='flip-card w-full relative'>
                         <div className='flip-card-inner'>
-                            <Image src={Reverse} layout='fill' alt='back side of a Pokémon card' objectFit='cover' objectPosition='center' className='flip-card-front' />
-                            <Image src={MysteryDungeon} layout='Mystery Dungeon' alt='Emerald' objectFit='cover' objectPosition='center' className='flip-card-back overflow-hidden' />
+                            <Image src={Reverse} layout='fill' alt='back side of a Pokémon card' objectFit='contain' objectPosition='center' className='flip-card-front' />
+                            <Image src={MysteryDungeon} layout='fill' alt='Mystery Dungeon' objectFit='contain' objectPosition='center' className='flip-card-back overflow-hidden' />
                         </div>
                     </div>
                 </div>
