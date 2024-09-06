@@ -1,3 +1,4 @@
+'use client';
 import icon from '../../../public/Smash/SuperSmashBros.svg';
     import Smash_64 from '../../../public/Smash/64.jpg';
     import Smash_Melee from '../../../public/Smash/Melee.jpg';
@@ -7,8 +8,8 @@ import icon from '../../../public/Smash/SuperSmashBros.svg';
 import Image from 'next/image';
 
 function Smash() {
-  return (
-    <>
+    return (
+    <div className='h-screen w-screen flex flex-col justify-center items-center gap-5 p-12 relative'>
         <div className='flex flex-row gap-5 h-64 w-full'>
             <div className='max-w w-1/2 rounded overflow-hidden shadow-lg relative'>
                 <div className="flex flex-row justify-center items-center h-full">
@@ -51,7 +52,7 @@ function Smash() {
                 </div>
             </div>
         </div>
-    </>
+    </div>
   )
 }
 

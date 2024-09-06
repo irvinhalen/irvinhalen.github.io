@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 function Mario() {
   return (
-    <div className='flex flex-row gap-5 h-80 w-full'>
+    <div className='flex flex-row gap-5 h-screen w-full'>
         <div className="flex flex-row max-w rounded overflow-hidden shadow-lg justify-center items-center w-4/5 relative">
             <Image src={Mario1} alt='Mario' loading='lazy' layout='fill' objectFit='cover' objectPosition='center' />
         </div>
