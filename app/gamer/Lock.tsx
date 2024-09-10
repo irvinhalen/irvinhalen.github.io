@@ -8,7 +8,6 @@ function Lock() {
     const [controlLock, setControlLock] = useState(true);
     const lockscreen = useRef<HTMLDivElement>(null);
 
-
     const handleKeyUp = useCallback((event:KeyboardEvent) => {
         if (!isScrolling) {
             if (event.key === 'ArrowUp') {
