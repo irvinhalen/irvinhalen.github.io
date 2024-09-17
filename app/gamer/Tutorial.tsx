@@ -11,9 +11,41 @@ function Tutorial() {
             <div className="rounded border-2 text-white h-12 w-12 flex justify-center items-center">D</div>
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center">
-          <h1 className='text-white'>Controls</h1>
-          <button type='button' className='text-white bg-gray-800 hover:bg-gray-900 font-large rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800'>Understood</button>
+        <div className="flex flex-col justify-center items-center text-white gap-5">
+          <h1>Controls:</h1>
+          <table cellPadding={5} cellSpacing={0} border={0}>
+            <tbody>
+              <tr>
+                <td>W</td>
+                <td>or</td>
+                <td>↑</td>
+                <td>=</td>
+                <td>Scroll Up</td>
+              </tr>
+              <tr>
+                <td>A</td>
+                <td>or</td>
+                <td>←</td>
+                <td>=</td>
+                <td>Open Left</td>
+              </tr>
+              <tr>
+                <td>S</td>
+                <td>or</td>
+                <td>↓</td>
+                <td>=</td>
+                <td>Scroll Down</td>
+              </tr>
+              <tr>
+                <td>D</td>
+                <td>or</td>
+                <td>→</td>
+                <td>=</td>
+                <td>Open Right</td>
+              </tr>
+            </tbody>
+          </table>
+          <h1>Scroll <u>down</u> to get started!</h1>
         </div>
         <div className="flex flex-col justify-center items-center gap-2">
           <div className="rounded border-2 text-white h-12 w-12 flex justify-center items-center">↑</div>
@@ -23,8 +55,6 @@ function Tutorial() {
             <div className="rounded border-2 text-white h-12 w-12 flex justify-center items-center">→</div>
           </div>
         </div>
-      </div>
-      <div className='h-svh w-svw flex flex-col gap-5 justify-center items-center bg-black'>
       </div>
     </>
   )
