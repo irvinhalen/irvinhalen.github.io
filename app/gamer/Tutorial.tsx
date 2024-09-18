@@ -16,36 +16,36 @@ function Tutorial() {
           <table cellPadding={5} cellSpacing={0} border={0}>
             <tbody>
               <tr>
-                <td>W</td>
+                <td className='text-yellow-400'>W</td>
                 <td>or</td>
-                <td>↑</td>
+                <td className='text-yellow-400'>↑</td>
                 <td>=</td>
                 <td>Scroll Up</td>
               </tr>
               <tr>
-                <td>A</td>
+                <td className='text-yellow-400'>A</td>
                 <td>or</td>
-                <td>←</td>
+                <td className='text-yellow-400'>←</td>
                 <td>=</td>
                 <td>Open Left</td>
               </tr>
               <tr>
-                <td>S</td>
+                <td className='text-yellow-400'>S</td>
                 <td>or</td>
-                <td>↓</td>
+                <td className='text-yellow-400'>↓</td>
                 <td>=</td>
                 <td>Scroll Down</td>
               </tr>
               <tr>
-                <td>D</td>
+                <td className='text-yellow-400'>D</td>
                 <td>or</td>
-                <td>→</td>
+                <td className='text-yellow-400'>→</td>
                 <td>=</td>
                 <td>Open Right</td>
               </tr>
             </tbody>
           </table>
-          <h1>Scroll <u>down</u> to get started!</h1>
+          <h1>Scroll <u>down</u> to get started.</h1>
         </div>
         <div className="flex flex-col justify-center items-center gap-2">
           <div className="rounded border-2 text-white h-12 w-12 flex justify-center items-center">↑</div>
