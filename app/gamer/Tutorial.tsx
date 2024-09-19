@@ -16,36 +16,37 @@ function Tutorial() {
           <table cellPadding={5} cellSpacing={0} border={0}>
             <tbody>
               <tr>
+                <td>Scroll Up</td>
+                <td>=</td>
                 <td className='text-yellow-400'>W</td>
                 <td>or</td>
                 <td className='text-yellow-400'>↑</td>
-                <td>=</td>
-                <td>Scroll Up</td>
               </tr>
               <tr>
+                <td>Open/Close Left</td>
+                <td>=</td>
                 <td className='text-yellow-400'>A</td>
                 <td>or</td>
                 <td className='text-yellow-400'>←</td>
-                <td>=</td>
-                <td>Open Left</td>
               </tr>
               <tr>
+                <td>Scroll Down</td>
+                <td>=</td>
                 <td className='text-yellow-400'>S</td>
                 <td>or</td>
                 <td className='text-yellow-400'>↓</td>
-                <td>=</td>
-                <td>Scroll Down</td>
               </tr>
               <tr>
+                <td>Open/Close Right</td>
+                <td>=</td>
                 <td className='text-yellow-400'>D</td>
                 <td>or</td>
                 <td className='text-yellow-400'>→</td>
-                <td>=</td>
-                <td>Open Right</td>
               </tr>
             </tbody>
           </table>
-          <h1>Scroll <u>down</u> to get started.</h1>
+          {/* <button type='button' className='border border-white hover:border-yellow-400 hover:text-yellow-400 font-large rounded-lg text-sm px-5 py-2.5 mt-10'>Understood</button> */}
+          <h1 className='border border-black font-large text-sm px-5 py-2.5 mt-10'>Scroll <u>down</u> to get started.</h1>
         </div>
         <div className="flex flex-col justify-center items-center gap-2">
           <div className="rounded border-2 text-white h-12 w-12 flex justify-center items-center">↑</div>
