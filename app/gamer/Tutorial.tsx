@@ -1,5 +1,8 @@
+'use client'
+import { useState } from 'react';
 
 function Tutorial() {
+  const [understood, setUnderstood] = useState(false);
   return (
     <>
       <div className="h-svh w-svh grid grid-cols-1 md:grid-cols-3 gap-5 w-full bg-black">
@@ -45,8 +48,11 @@ function Tutorial() {
               </tr>
             </tbody>
           </table>
-          {/* <button type='button' className='border border-white hover:border-yellow-400 hover:text-yellow-400 font-large rounded-lg text-sm px-5 py-2.5 mt-10'>Understood</button> */}
-          <h1 className='border border-black font-large text-sm px-5 py-2.5 mt-10'>Scroll <u>down</u> to get started.</h1>
+          { understood ? (
+            <h1 className='border border-black font-large text-sm px-5 py-2.5 mt-10'>Scroll <u>down</u> to get started.</h1>
+          ):(
+            <button type='button' onClick={() => setUnderstood(true)} className='border border-white hover:border-yellow-400 hover:text-yellow-400 font-large rounded-lg text-sm px-5 py-2.5 mt-10'>Understood</button>
+          )}
         </div>
         <div className="flex flex-col justify-center items-center gap-2">
           <div className="rounded border-2 text-white h-12 w-12 flex justify-center items-center">↑</div>
