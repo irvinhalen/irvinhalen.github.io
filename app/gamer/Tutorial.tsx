@@ -1,8 +1,40 @@
 'use client'
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+import { scrollUp, scrollDown } from './controls';
 
 function Tutorial() {
   const [understood, setUnderstood] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
+  const [controlLock, setControlLock] = useState(true);
+
+  const handleKeyUp = useCallback((event:KeyboardEvent) => {
+    if (!isScrolling) {
+        if (event.key === 'ArrowUp') {
+            scrollUp();
+        } else if (event.key === 'ArrowDown') {
+            scrollDown();
+        }
+        setIsScrolling(true);
+        setTimeout(() => {
+            setIsScrolling(false);
+        }, 500);
+    }
+  }, [isScrolling]);
+
+  useEffect(() => {
+      if(!controlLock) {
+          window.addEventListener('keyup', handleKeyUp);
+      }
+      return () => {
+          window.removeEventListener('keyup', handleKeyUp);
+      };
+  }, [handleKeyUp, controlLock]);
+
+  const unlockScroll = () => {
+      setUnderstood(true);
+      setControlLock(false);
+  };
+
   return (
     <>
       <div className="h-svh w-svh grid grid-cols-1 md:grid-cols-3 gap-5 w-full bg-black">
@@ -51,7 +83,7 @@ function Tutorial() {
           { understood ? (
             <h1 className='border border-black font-large text-sm px-5 py-2.5 mt-10'>Scroll <u>down</u> to get started.</h1>
           ):(
-            <button type='button' onClick={() => setUnderstood(true)} className='border border-white hover:border-yellow-400 hover:text-yellow-400 font-large rounded-lg text-sm px-5 py-2.5 mt-10'>Understood</button>
+            <button type='button' onClick={unlockScroll} className='border border-white hover:border-yellow-400 hover:text-yellow-400 font-large rounded-lg text-sm px-5 py-2.5 mt-10'>Understood</button>
           )}
         </div>
         <div className="flex flex-col justify-center items-center gap-2">
