@@ -1,37 +1,12 @@
 'use client'
-import React, { useState, useEffect, useRef, useCallback } from 'react'
-import { scrollUp, scrollDown } from './controls';
+import React, { useState, useRef } from 'react';
+import { scrollDown } from './controls';
 
 function Lock() {
     const [password, setPassword] = useState<string>('');
-    const [isScrolling, setIsScrolling] = useState(false);
-    const [controlLock, setControlLock] = useState(true);
     const lockscreen = useRef<HTMLDivElement>(null);
 
-    const handleKeyUp = useCallback((event:KeyboardEvent) => {
-        if (!isScrolling) {
-            if (event.key === 'ArrowUp') {
-                scrollUp();
-            } else if (event.key === 'ArrowDown') {
-                scrollDown();
-            }
-            setIsScrolling(true);
-            setTimeout(() => {
-                setIsScrolling(false);
-            }, 500);
-        }
-    }, [isScrolling]);
-
-    useEffect(() => {
-        if(!controlLock) {
-            window.addEventListener('keyup', handleKeyUp);
-        }
-        return () => {
-            window.removeEventListener('keyup', handleKeyUp);
-        };
-    }, [handleKeyUp, controlLock]);
-
-    const unlockScroll = () => {
+    const nextScreen = () => {
         return new Promise<void>((resolve) => {
             scrollDown();
             setTimeout(() => {
@@ -42,8 +17,7 @@ function Lock() {
 
     const unlock = async () => {
         if(password == '1010') {
-            setControlLock(false);
-            await unlockScroll();
+            await nextScreen();
             if(lockscreen.current) {
                 lockscreen.current.remove();
             }
