@@ -9,9 +9,9 @@ function Tutorial() {
 
   const handleKeyUp = useCallback((event:KeyboardEvent) => {
     if (!isScrolling) {
-        if (event.key === 'ArrowUp') {
+        if (event.key === 'ArrowUp' || event.key === 'w') {
             scrollUp();
-        } else if (event.key === 'ArrowDown') {
+        } else if (event.key === 'ArrowDown' || event.key === 's') {
             scrollDown();
         }
         setIsScrolling(true);
