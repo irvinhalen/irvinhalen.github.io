@@ -1,25 +1,34 @@
 'use client'
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { scrollUp, scrollDown } from './controls';
 
 function Tutorial() {
-  const [understood, setUnderstood] = useState(false);
-  const [isScrolling, setIsScrolling] = useState(false);
-  const [controlLock, setControlLock] = useState(true);
+  const [understood, setUnderstood] = useState<boolean>(false);
+  const [isScrolling, setIsScrolling] = useState<boolean>(false);
+  const [controlLock, setControlLock] = useState<boolean>(true);
+  const [tutorialComplete, setTutorialComplete] = useState<boolean>(false);
+  const tutorialScreen = useRef<HTMLDivElement>(null);
 
   const handleKeyUp = useCallback((event:KeyboardEvent) => {
     if (!isScrolling) {
-        if (event.key === 'ArrowUp' || event.key === 'w') {
-            scrollUp();
-        } else if (event.key === 'ArrowDown' || event.key === 's') {
-            scrollDown();
+      if (event.key === 'ArrowUp' || event.key === 'w') {
+          scrollUp();
+      } else if (event.key === 'ArrowDown' || event.key === 's') {
+        scrollDown();
+        if (tutorialComplete) {
+          setTimeout(() => {
+            if (tutorialScreen.current) {
+                tutorialScreen.current.remove();
+              }
+          }, 500);
         }
-        setIsScrolling(true);
-        setTimeout(() => {
-            setIsScrolling(false);
-        }, 500);
+      }
+      setIsScrolling(true);
+      setTimeout(() => {
+        setIsScrolling(false);
+      }, 500);
     }
-  }, [isScrolling]);
+  }, [isScrolling, tutorialComplete]);
 
   useEffect(() => {
       if(!controlLock) {
@@ -33,16 +42,21 @@ function Tutorial() {
   const unlockScroll = () => {
       setUnderstood(true);
       setControlLock(false);
+      setTutorialComplete(true);
   };
 
   return (
     <>
-      <div className="h-svh w-svh grid grid-cols-1 md:grid-cols-3 gap-5 w-full bg-black">
+      <div id='tutorialScreen' ref={tutorialScreen} className="h-svh w-svh grid grid-cols-1 md:grid-cols-3 gap-5 w-full bg-black">
         <div className="flex flex-col justify-center items-center gap-2">
           <div className="rounded border-2 text-white h-12 w-12 flex justify-center items-center">W</div>
           <div className="flex flex-row justify-center items-center gap-2">
             <div className="rounded border-2 text-white h-12 w-12 flex justify-center items-center">A</div>
-            <div className="rounded border-2 text-white h-12 w-12 flex justify-center items-center">S</div>
+            { controlLock ? (
+              <div className="rounded border-2 text-white h-12 w-12 flex justify-center items-center">S</div>
+            ) : (
+              <div className="color-blink rounded border-2 text-white h-12 w-12 flex justify-center items-center">S</div>
+            ) }
             <div className="rounded border-2 text-white h-12 w-12 flex justify-center items-center">D</div>
           </div>
         </div>
@@ -53,16 +67,32 @@ function Tutorial() {
               <tr>
                 <td>Scroll Up</td>
                 <td>=</td>
-                <td className='text-yellow-400'>W</td>
+                { controlLock ? (
+                  <td className='text-yellow-400'>W</td>
+                ) : (
+                  <td>W</td>
+                ) }
                 <td>or</td>
-                <td className='text-yellow-400'>↑</td>
+                { controlLock ? (
+                  <td className='text-yellow-400'>↑</td>
+                ) : (
+                  <td>↑</td>
+                ) }
               </tr>
               <tr>
                 <td>Open/Close Left</td>
                 <td>=</td>
-                <td className='text-yellow-400'>A</td>
+                { controlLock ? (
+                  <td className='text-yellow-400'>A</td>
+                ) : (
+                  <td>A</td>
+                ) }
                 <td>or</td>
-                <td className='text-yellow-400'>←</td>
+                { controlLock ? (
+                  <td className='text-yellow-400'>←</td>
+                ) : (
+                  <td>←</td>
+                ) }
               </tr>
               <tr>
                 <td>Scroll Down</td>
@@ -74,9 +104,17 @@ function Tutorial() {
               <tr>
                 <td>Open/Close Right</td>
                 <td>=</td>
-                <td className='text-yellow-400'>D</td>
+                { controlLock ? (
+                  <td className='text-yellow-400'>D</td>
+                ) : (
+                  <td>D</td>
+                ) }
                 <td>or</td>
-                <td className='text-yellow-400'>→</td>
+                { controlLock ? (
+                  <td className='text-yellow-400'>→</td>
+                ) : (
+                  <td>→</td>
+                ) }
               </tr>
             </tbody>
           </table>
@@ -90,7 +128,11 @@ function Tutorial() {
           <div className="rounded border-2 text-white h-12 w-12 flex justify-center items-center">↑</div>
           <div className="flex flex-row justify-center items-center gap-2">
             <div className="rounded border-2 text-white h-12 w-12 flex justify-center items-center">←</div>
-            <div className="rounded border-2 text-white h-12 w-12 flex justify-center items-center">↓</div>
+            { controlLock ? (
+              <div className="rounded border-2 text-white h-12 w-12 flex justify-center items-center">↓</div>
+            ) : (
+              <div className="color-blink rounded border-2 text-white h-12 w-12 flex justify-center items-center">↓</div>
+            ) }
             <div className="rounded border-2 text-white h-12 w-12 flex justify-center items-center">→</div>
           </div>
         </div>
