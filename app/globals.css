@@ -69,4 +69,17 @@ body {
   width: 100vw;
 }
 
+@keyframes blink {
+  0% {
+    background-color: rgb(250 204 21 / 1);
+  }
+  100% {
+    background-color: none;
+  }
+}
+
+.color-blink {
+  animation: blink 1s infinite;
+}
+
 /* End of Gamer */
