@@ -18,6 +18,11 @@ export default function Home() {
             rel="noopener noreferrer"
             className="absolute left-[52%] right-[46%] top-[66%] bottom-[27%] bg-black"
           />
+          <Link
+            href="#"
+            rel="noopener noreferrer"
+            className="absolute left-[66%] right-[27%] top-[52%] bottom-[46%] bg-black"
+          />
       </div>
     </main>
   );
