@@ -18,15 +18,15 @@ function Tutorial() {
         if (tutorialComplete) {
           setTimeout(() => {
             if (tutorialScreen.current) {
-                tutorialScreen.current.remove();
-              }
-          }, 500);
+              tutorialScreen.current.remove();
+            }
+          }, 700);
         }
       }
       setIsScrolling(true);
       setTimeout(() => {
         setIsScrolling(false);
-      }, 500);
+      }, 700);
     }
   }, [isScrolling, tutorialComplete]);
 
@@ -47,7 +47,7 @@ function Tutorial() {
 
   return (
     <>
-      <div id='tutorialScreen' ref={tutorialScreen} className="h-svh w-svh grid grid-cols-1 md:grid-cols-3 gap-5 w-full bg-black">
+      <div ref={tutorialScreen} className="h-svh w-50% grid grid-cols-1 md:grid-cols-3 gap-5 w-full bg-black">
         <div className="flex flex-col justify-center items-center gap-2">
           <div className="rounded border-2 text-white h-12 w-12 flex justify-center items-center">W</div>
           <div className="flex flex-row justify-center items-center gap-2">
