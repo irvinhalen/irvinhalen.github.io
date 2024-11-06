@@ -8,6 +8,25 @@ body {
   padding: 0;
 }
 
+.desktop-icon {
+  width: 18%;
+}
+
+.void {
+  left: 57.1%;
+  right: 12.7%;
+  top: 37.5%;
+  bottom: 29.1%;
+  transition: all 1s;
+}
+
+.void-consume {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
 /* Start of Gamer */
 
 .flip-card {
@@ -54,21 +73,6 @@ body {
   transform: rotateY(180deg);
 }
 
-.void {
-  background-color: black;
-  border-radius: 50%;
-  height: 0px;
-  width: 0px;
-  z-index: -1;
-  transition: height 0.5s, width 0.5s, border-radius 0.5s;
-}
-
-.trigger:hover > .void {
-  border-radius: 0;
-  height: 100vh;
-  width: 100vw;
-}
-
 @keyframes blink {
   0% {
     background-color: rgb(250 204 21 / 1);
@@ -83,3 +87,19 @@ body {
 }
 
 /* End of Gamer */
+
+/* Start of Misc */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* End of Misc */
