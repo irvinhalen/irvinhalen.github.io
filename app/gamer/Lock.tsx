@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { useState, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { scrollDown } from './controls';
 import exit from '../../public/Mii/icons/exit.ico';
 
@@ -10,6 +10,10 @@ function Lock() {
     const [isUnlocked, setIsUnlocked] = useState<boolean>(false);
     const lockScreen = useRef<HTMLDivElement>(null);
     const router = useRouter();
+
+    useEffect(() => {
+        lockScreen.current?.scrollIntoView({ behavior: 'smooth' });
+    }, []);
 
     const nextScreen = () => {
         return new Promise<void>((resolve) => {
@@ -21,7 +25,7 @@ function Lock() {
     };
 
     const unlock = async () => {
-        if(password == '1010') {
+        if(password == process.env.NEXT_PUBLIC_GAMER_PASSWORD) {
             setIsUnlocked(true);
             await nextScreen();
             if(lockScreen.current) {
