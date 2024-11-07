@@ -60,17 +60,25 @@ export default function Home() {
             loading="lazy"
             height={30}
             onClick={() => {
-              introRef.current?.load();
+              const iframe = document.querySelector('iframe');
+              if (iframe) {
+                  const src = iframe.src;
+                  iframe.src = '';
+                  iframe.src = src;
+              }
               setOnDisc(false);
             }}
             className="cursor-pointer absolute top-[5%] right-[5%]"
         />
-        <div className="w-[70%]">
-          <video ref={introRef} controls>
-              <source src='/Mii/intro.MOV' type='video/mp4' />
-              A video introduction
-          </video>
-        </div>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/D0ObHRGO5HY?si=za--4JdHMyDPX4DQ"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
       </div>
       <div className='relative h-screen w-screen flex items-center justify-center'>
         <Image
