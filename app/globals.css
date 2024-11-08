@@ -27,6 +27,14 @@ body {
   bottom: 0;
 }
 
+.invisible-transition {
+  transition: visibility 0.2s, opacity 0.2s;
+}
+
+.object-transition {
+  transition: visibility 0s, transform 0.5s;
+}
+
 /* Start of Gamer */
 
 .flip-card {
