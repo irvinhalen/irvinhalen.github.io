@@ -119,7 +119,10 @@ function Tutorial() {
             </tbody>
           </table>
           { understood ? (
-            <h1 className='border border-black font-large text-sm px-5 py-2.5 mt-10'>Scroll <u>down</u> to get started.</h1>
+            <div className='relative'>
+              <h1 className='border font-large text-sm px-5 py-2.5 mt-10 invisible'>Scroll <u>down</u> to get started.</h1>
+              <h1 className='absolute font-large text-sm px-5 py-2.5 mt-10 top-0 bottom-0 left-0 right-0'>Scroll <u>down</u> to get started.</h1>
+            </div>
           ):(
             <button type='button' onClick={unlockScroll} className='border border-white hover:border-yellow-400 hover:text-yellow-400 font-large rounded-lg text-sm px-5 py-2.5 mt-10'>Understood</button>
           )}
