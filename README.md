@@ -1,19 +1,20 @@
 # Irvin Halen
 
 
-## About Me
+## Introduction
 
-I am a software engineer and I like building cool projects that are fun for me and hopefully for others too.
+My name is Irvin and I am a software engineer. I like building cool projects that I find fun.
 
+irvinhalen.github.io is a personal website built with [Next.js](https://nextjs.org/) and bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) meant to showcase my work. Feel free to take a look under the hood by following the instructions under Setup.
 
-## Getting Started
+## Setup
 
-This project is for me but feel free to take a look under the hood.  
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-First, run the development server:
-
-```bash
+1. Install the dependencies by running the command
+```sh
+npm install
+```
+2. Run the development server:
+```sh
 npm run dev
 # or
 yarn dev
@@ -22,9 +23,4 @@ pnpm dev
 # or
 bun dev
 ```
-
-Open [http://localhost:1337](http://localhost:1337) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. Open the URL, [http://localhost:1010](http://localhost:1010), on your browser to view the website on your local machine.
