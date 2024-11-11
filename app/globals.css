@@ -94,6 +94,89 @@ body {
   animation: blink 1s infinite;
 }
 
+.video-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-container video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-wrapper * {
+  box-sizing: border-box;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transform-style: preserve-3d;
+}
+
+.carousel_photo {
+  width: 50%;
+  margin: auto;
+  z-index: 100;
+  transition: transform .5s, opacity .5s, z-index .5s;
+  flex-shrink: 0;
+  flex-grow: 0;
+  transition: translate 500ms ease-in-out;
+}
+
+.carousel_button-prev,
+.carousel_button-next {
+  position: absolute;
+  top:50%;
+  width: 3rem;
+  height: 3rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.carousel_button-prev {
+  left:8%;
+}
+.carousel_button-next {
+  right:8%;
+}
+
+.carousel_button-prev::after,
+.carousel_button-next::after {
+  content: " ";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 54%;
+  border-right: 5px solid white;
+  border-bottom: 5px solid white;
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.carousel_button-next::after {
+  left: 47%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 /* End of Gamer */
 
 /* Start of Misc */
