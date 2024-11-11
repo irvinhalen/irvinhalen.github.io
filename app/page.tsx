@@ -58,7 +58,7 @@ export default function Home() {
         </div>
       </div>
       <div className={`z-20 absolute flex flex-col items-center justify-center object-transition ${onBlackground && objectClicked && objectName === 'book' ? 'visible':' invisible scale-75'}`}>
-        <div className="relative h-full w-full">
+        <div className="overflow-auto relative h-full w-full">
           <Image
             src={hyacinth}
             alt='hyacinth'
@@ -135,7 +135,7 @@ export default function Home() {
         />
         <div ref={linkContainer} className='relative'>
           <div ref={voidRef} className={`absolute z-10 bg-black flex overflow-hidden void ${onLock ? 'bg-black':'invisible'}`} />
-          <div className={`absolute left-[57.1%] right-[12.7%] top-[37.5%] bottom-[29.1%] bg-black flex overflow-hidden ${onFolder ? 'bg-white':'bg-blue-300'}`}>
+          <div className={`absolute left-[57.1%] right-[12.7%] top-[37.5%] bottom-[29.1%] bg-black flex overflow-auto ${onFolder ? 'bg-white':'bg-blue-300'}`}>
             <div className={`bg-white h-full w-full ${onKey ? '':'hidden'}`}>
               <div className="flex flex-row items-start justify-between p-5 gap-5 w-full h-full">
                 <p className="text-black text-xs font-mono">
