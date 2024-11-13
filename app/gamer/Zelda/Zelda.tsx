@@ -25,7 +25,7 @@ function Zelda() {
         } else {
             setDisableLeftArrow(false);
         }
-    }, [imgIndex]);
+    }, [imgArray.length, imgIndex]);
 
     const showNextImg = () => {
         setImgIndex(index => {
