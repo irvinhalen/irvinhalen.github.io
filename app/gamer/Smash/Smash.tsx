@@ -8,17 +8,16 @@ import icon from '../../../public/Smash/SuperSmashBros.svg';
 import Image from 'next/image';
 
 function Smash() {
-    return (
-    <div className='h-screen w-screen flex flex-col justify-center items-center gap-5 p-12 relative'>
+  return (
+    <div className='h-svh w-svw flex flex-col justify-center items-center gap-5 p-12'>
         <div className='flex flex-row gap-5 h-64 w-full'>
             <div className='max-w w-1/2 rounded overflow-hidden shadow-lg relative'>
                 <div className="flex flex-row justify-center items-center h-full">
                     <Image src={Smash_Ultimate} alt='Smash' layout='fill' objectFit='cover' objectPosition='center' />
                 </div>
             </div>
-            {/* <div className="flex flex-row max-w rounded shadow-lg justify-center items-center h-full w-1/3 relative trigger">
+            {/* <div className="flex flex-row max-w rounded shadow-lg justify-center items-center h-full w-1/3 relative">
                 <Image src={Smash} alt='Super Smash Bros. logo' loading='lazy' objectPosition='center' />
-                <div className='void absolute top-0 bottom-0 left-0 right-0' />
             </div> */}
             <div className='max-w w-1/2 rounded overflow-hidden shadow-lg relative'>
                 <div className="flex flex-row justify-center items-center h-full">
