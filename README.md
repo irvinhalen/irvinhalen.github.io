@@ -9,11 +9,16 @@ irvinhalen.github.io is a personal website built with [Next.js](https://nextjs.o
 
 ## Setup
 
-1. Install the dependencies by running the command
+1. Create a `.env` file on the root directory of this project
+    - Make sure to replace NUMBER below with actual number values you want to set as a password for the /gamer path of the application
+```env
+NEXT_PUBLIC_GAMER_PASSWORD=NUMBER
+```
+2. Install the dependencies by running the command
 ```sh
 npm install
 ```
-2. Run the development server:
+3. Run the development server:
 ```sh
 npm run dev
 # or
@@ -23,4 +28,4 @@ pnpm dev
 # or
 bun dev
 ```
-3. Open the URL, [http://localhost:1010](http://localhost:1010), on your browser to view the website on your local machine.
+4. Open the URL, [http://localhost:1010](http://localhost:1010), on your browser to view the website on your local machine.
