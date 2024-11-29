@@ -37,6 +37,59 @@ body {
 
 /* Start of Gamer */
 
+@keyframes blink {
+  0% {
+    background-color: rgb(250 204 21 / 1);
+  }
+  100% {
+    background-color: none;
+  }
+}
+
+.color-blink {
+  animation: blink 1s infinite;
+}
+
+.smash-card {
+  background: rgb(128 128 128 / 0.2);
+  padding: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.smash-card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.smash-img {
+  height: 16rem!important;
+  object-fit: cover;
+  object-position: center;
+}
+
+.blob {
+  filter: blur(50px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  background: rgba(255, 68, 0, 0.8);
+}
+
+.fake-blob {
+  display: hidden;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+}
+
 .flip-card {
   background-color: transparent;
   perspective: 1000px;
@@ -81,17 +134,24 @@ body {
   transform: rotateY(180deg);
 }
 
-@keyframes blink {
-  0% {
-    background-color: rgb(250 204 21 / 1);
-  }
-  100% {
-    background-color: none;
-  }
+#question-block-1:hover {
+  cursor: url(../public/Mario/coin.png) 28 32, auto;
 }
 
-.color-blink {
-  animation: blink 1s infinite;
+#question-block-2:hover {
+  cursor: url(../public/Mario/mushroom.png) 32 32, auto;
+}
+
+#question-block-3:hover {
+  cursor: url(../public/Mario/flower.png) 32 32, auto;
+}
+
+#question-block-4:hover {
+  cursor: url(../public/Mario/star.png) 32 32, auto;
+}
+
+#chest-block:hover {
+  cursor: url(../public/Mario/Mario1.png) 64 36, auto;
 }
 
 .video-container {
