@@ -6,23 +6,52 @@ import icon from '../../../public/Smash/SuperSmashBros.svg';
     import Smash_4 from '../../../public/Smash/forNintendo3DS&forWiiU.jpg';
     import Smash_Ultimate from '../../../public/Smash/Ultimate.jpg';
 import Image from 'next/image';
+import { useEffect } from 'react';
 
 function Smash() {
+    useEffect(() => {
+        const allCards = document.querySelectorAll('.smash-card');
+
+        window.addEventListener('mousemove', (event) => {
+            allCards.forEach((e) => {
+                const blob = e.querySelector('.blob');
+                const fblob = e.querySelector('.fake-blob');
+
+                const rec = fblob?.getBoundingClientRect();
+                if(rec) {
+                    blob?.animate(
+                        [{
+                            transform: `translate(${event.clientX - rec.left - (rec.width / 2)}px,${event.clientY - rec.top - (rec.height / 2)}px)`
+                        }],
+                        {
+                            duration: 300,
+                            fill: 'forwards'
+                        }
+                    )
+                }
+            });
+        });
+    }, [])
+
   return (
-    <div className='h-svh w-svw flex flex-col justify-center items-center gap-5 p-12'>
-        <div className='flex flex-row gap-5 h-64 w-full'>
-            <div className='max-w w-1/2 rounded overflow-hidden shadow-lg relative'>
-                <div className="flex flex-row justify-center items-center h-full">
-                    <Image src={Smash_Ultimate} alt='Smash' layout='fill' objectFit='cover' objectPosition='center' />
+    <div className='h-svh w-svw flex flex-col justify-center items-center gap-5 p-12 bg-black overflow-hidden'>
+        <div className='flex flex-row gap-5 w-full'>
+            <div className='smash-card max-w w-1/2 h-fit rounded relative'>
+                <div className="smash-card-content">
+                    <Image src={Smash_Ultimate} alt='Super Smash Bros. Ultimate' loading='lazy' layout='responsive' className='smash-img' />
                 </div>
+                <div className='blob' />
+                <div className='fake-blob' />
             </div>
             {/* <div className="flex flex-row max-w rounded shadow-lg justify-center items-center h-full w-1/3 relative">
                 <Image src={Smash} alt='Super Smash Bros. logo' loading='lazy' objectPosition='center' />
             </div> */}
-            <div className='max-w w-1/2 rounded overflow-hidden shadow-lg relative'>
-                <div className="flex flex-row justify-center items-center h-full">
-                    <Image src={Smash_4} alt='Smash' loading='lazy' layout='fill' objectFit='cover' objectPosition='center' className='z-10' />
+            <div className='smash-card max-w w-1/2 rounded overflow-hidden relative'>
+                <div className="smash-card-content overflow-hidden">
+                    <Image src={Smash_4} alt='Super Smash Bros. for Nintendo 3DS/Wii U' loading='lazy' layout='responsive' className='smash-img' />
                 </div>
+                <div className='blob' />
+                <div className='fake-blob' />
             </div>
             {/* <div className="flex flex-row max-w rounded overflow-hidden shadow-lg items-center w-3/6 skew-x-3">
                 <Image src={Smash} alt='Super Smash Bros. logo' loading='lazy'/>
@@ -34,21 +63,27 @@ function Smash() {
                 </div>
             </div> */}
         </div>
-        <div className='flex flex-row gap-5 h-64 w-full'>
-            <div className='max-w w-1/3 rounded overflow-hidden shadow-lg relative'>
-                <div className="flex flex-row justify-center items-center h-full">
-                    <Image src={Smash_Brawl} alt='Smash' layout='fill' objectFit='cover' objectPosition='center' />
+        <div className='flex flex-row gap-5 w-full'>
+            <div className='smash-card max-w w-1/3 rounded overflow-hidden relative'>
+                <div className="smash-card-content flex h-full overflow-hidden">
+                    <Image src={Smash_Brawl} alt='Super Smash Bros. Brawl' layout='responsive' />
                 </div>
+                <div className='blob' />
+                <div className='fake-blob' />
             </div>
-            <div className='max-w w-1/3 rounded overflow-hidden shadow-lg relative'>
-                <div className="flex flex-row justify-center items-center h-full">
-                    <Image src={Smash_Melee} alt='Smash' layout='fill' objectFit='cover' objectPosition='center' />
+            <div className='smash-card max-w w-1/3 rounded overflow-hidden relative'>
+                <div className="smash-card-content flex h-full overflow-hidden">
+                    <Image src={Smash_Melee} alt='Super Smash Bros. Melee' layout='responsive' />
                 </div>
+                <div className='blob' />
+                <div className='fake-blob' />
             </div>
-            <div className='max-w w-1/3 rounded overflow-hidden shadow-lg relative'>
-                <div className="flex flex-row justify-center items-center h-full">
-                    <Image src={Smash_64} alt='Smash' layout='fill' objectFit='cover' objectPosition='center' />
+            <div className='smash-card max-w w-1/3 rounded overflow-hidden relative'>
+                <div className="smash-card-content flex h-full overflow-hidden">
+                    <Image src={Smash_64} alt='Super Smash Bros. 64' layout='responsive' />
                 </div>
+                <div className='blob' />
+                <div className='fake-blob' />
             </div>
         </div>
     </div>
