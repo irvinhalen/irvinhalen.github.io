@@ -5,7 +5,7 @@ import setting from '../../../public/Mario/setting.png';
 import music from '../../../public/Mario/setting-music.png';
 import background from '../../../public/Mario/background.png';
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 function Mario() {
     const [isPlaying, setIsPlaying] = useState<boolean>(false);
@@ -46,7 +46,7 @@ function Mario() {
         <div className='absolute flex justify-center items-center h-full w-full overflow-hidden'>
             <Image
                 src={background}
-                alt="desk"
+                alt="Super Mario Advance 4: World 1-1 background"
                 loading="lazy"
                 className="object-cover pointer-events-none"
             />
