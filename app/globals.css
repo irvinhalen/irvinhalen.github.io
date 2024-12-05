@@ -134,26 +134,6 @@ body {
   transform: rotateY(180deg);
 }
 
-#question-block-1:hover {
-  cursor: url(../public/Mario/coin.png) 28 32, auto;
-}
-
-#question-block-2:hover {
-  cursor: url(../public/Mario/mushroom.png) 32 32, auto;
-}
-
-#question-block-3:hover {
-  cursor: url(../public/Mario/flower.png) 32 32, auto;
-}
-
-#question-block-4:hover {
-  cursor: url(../public/Mario/star.png) 32 32, auto;
-}
-
-#chest-block:hover {
-  cursor: url(../public/Mario/Mario1.png) 64 36, auto;
-}
-
 .video-container {
   position: absolute;
   top: 0;
@@ -237,6 +217,34 @@ body {
   border-right: 5px solid gray;
   border-bottom: 5px solid gray;
   filter: none;
+}
+
+#question-block-1:hover {
+  cursor: url(../public/Mario/coin.png) 28 32, auto;
+}
+
+#question-block-2:hover {
+  cursor: url(../public/Mario/mushroom.png) 32 32, auto;
+}
+
+#question-block-3:hover {
+  cursor: url(../public/Mario/flower.png) 32 32, auto;
+}
+
+#question-block-4:hover {
+  cursor: url(../public/Mario/star.png) 32 32, auto;
+}
+
+#chest-block:hover {
+  cursor: url(../public/Mario/Mario1.png) 64 36, auto;
+}
+
+.dirt-block:hover {
+  cursor: url(../public/Minecraft/shovel.png) 16 16, auto;
+}
+
+.stone-block:hover {
+  cursor: url(../public/Minecraft/pickaxe.png) 16 16, auto;
 }
 
 /* End of Gamer */
