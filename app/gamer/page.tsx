@@ -18,8 +18,8 @@ export default function Page() {
             <Tutorial />
             <Smash />
             <Pokémon />
-            <Mario />
             <Zelda />
+            <Mario />
             <Minecraft />
         </main>
     );
