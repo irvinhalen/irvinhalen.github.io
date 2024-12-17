@@ -121,14 +121,6 @@ function Minecraft() {
                         className="object-fill"
                     />
                 </div>
-                <div className="dirt-block absolute left-[30%] right-[60%] bottom-[90%] z-10">
-                    <Image
-                        src={dirt}
-                        alt="dirt"
-                        loading="lazy"
-                        className="object-fill"
-                    />
-                </div>
                 <div className="dirt-block absolute left-[40%] right-[50%] bottom-[90%] z-10">
                     <Image
                         src={dirt}
