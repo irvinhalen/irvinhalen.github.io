@@ -97,20 +97,20 @@ function Minecraft() {
                         className="object-fill"
                     />
                 </div>
-                <div className="stone-block absolute left-[5%] right-[75%] top-[-20.3%] z-10">
+                <div className="dirt-block absolute left-[10%] right-[80%] top-[-10%] z-10">
                     <Image
-                        src={stone}
-                        alt="stone"
+                        src={dirt}
+                        alt="dirt"
                         loading="lazy"
-                        className="absolute right-0 scale-50"
+                        className="object-fill"
                     />
                 </div>
-                <div className="stone-block absolute left-[5%] right-[75%] top-[-0.2%] z-10">
+                <div className="dirt-block absolute left-[10%] right-[80%] top-[10%] z-10">
                     <Image
-                        src={stone}
-                        alt="stone"
+                        src={dirt}
+                        alt="dirt"
                         loading="lazy"
-                        className="absolute right-0 scale-50"
+                        className="object-fill"
                     />
                 </div>
                 <div className="dirt-block absolute left-[10%] right-[80%] top-[30%] z-10">
@@ -121,54 +121,22 @@ function Minecraft() {
                         className="object-fill"
                     />
                 </div>
-                <div className="dirt-block absolute left-[40%] right-[50%] bottom-[90%] z-10">
+                {/* <div className="stone-block absolute left-[15%] right-[65%] top-[-20.3%] z-10">
                     <Image
-                        src={dirt}
-                        alt="dirt"
+                        src={stone}
+                        alt="stone"
                         loading="lazy"
-                        className="object-fill"
+                        className="absolute right-0 scale-50"
                     />
                 </div>
-                <div className="dirt-block absolute left-[50%] right-[40%] bottom-[90%] z-10">
+                <div className="stone-block absolute left-[15%] right-[65%] top-[-0.2%] z-10">
                     <Image
-                        src={dirt}
-                        alt="dirt"
+                        src={stone}
+                        alt="stone"
                         loading="lazy"
-                        className="object-fill"
+                        className="absolute right-0 scale-50"
                     />
-                </div>
-                <div className="dirt-block absolute left-[60%] right-[30%] bottom-[90%] z-10">
-                    <Image
-                        src={dirt}
-                        alt="dirt"
-                        loading="lazy"
-                        className="object-fill"
-                    />
-                </div>
-                <div className="dirt-block absolute left-[70%] right-[20%] bottom-[90%] z-10">
-                    <Image
-                        src={dirt}
-                        alt="dirt"
-                        loading="lazy"
-                        className="object-fill"
-                    />
-                </div>
-                <div className="dirt-block absolute left-[80%] right-[10%] bottom-[90%] z-10">
-                    <Image
-                        src={dirt}
-                        alt="dirt"
-                        loading="lazy"
-                        className="object-fill"
-                    />
-                </div>
-                <div className="dirt-block absolute left-[90%] right-0 bottom-[90%] z-10">
-                    <Image
-                        src={dirt}
-                        alt="dirt"
-                        loading="lazy"
-                        className="object-fill"
-                    />
-                </div>
+                </div> */}
             </div>
         </div>
         {/* <div className="flex flex-row max-w rounded overflow-hidden shadow-lg justify-center items-center w-4/5 relative">
