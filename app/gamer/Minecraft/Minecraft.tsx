@@ -241,6 +241,102 @@ function Minecraft() {
                         className="absolute right-0 scale-50"
                     />
                 </div>
+                <div className="dirt-block absolute left-[40%] right-[50%] top-[-10%] z-10">
+                    <Image
+                        src={dirt}
+                        alt="dirt"
+                        loading="lazy"
+                        className="object-fill"
+                    />
+                </div>
+                <div className="dirt-block absolute left-[40%] right-[50%] top-[10%] z-10">
+                    <Image
+                        src={dirt}
+                        alt="dirt"
+                        loading="lazy"
+                        className="object-fill"
+                    />
+                </div>
+                <div className="stone-block absolute left-[34.9%] right-[45%] top-[19.8%] z-10">
+                    <Image
+                        src={stone}
+                        alt="stone"
+                        loading="lazy"
+                        className="absolute right-0 scale-50"
+                    />
+                </div>
+                <div className="stone-block absolute left-[34.9%] right-[45%] top-[39.8%] z-10">
+                    <Image
+                        src={stone}
+                        alt="stone"
+                        loading="lazy"
+                        className="absolute right-0 scale-50"
+                    />
+                </div>
+                <div className="stone-block absolute left-[34.9%] right-[45%] top-[59.8%] z-10">
+                    <Image
+                        src={stone}
+                        alt="stone"
+                        loading="lazy"
+                        className="absolute right-0 scale-50"
+                    />
+                </div>
+                <div className="dirt-block absolute left-[40%] right-[50%] top-[90%] z-10">
+                    <Image
+                        src={dirt}
+                        alt="dirt"
+                        loading="lazy"
+                        className="object-fill"
+                    />
+                </div>
+                <div className="dirt-block absolute left-[50%] right-[40%] top-[-10%] z-10">
+                    <Image
+                        src={dirt}
+                        alt="dirt"
+                        loading="lazy"
+                        className="object-fill"
+                    />
+                </div>
+                <div className="dirt-block absolute left-[50%] right-[40%] top-[10%] z-10">
+                    <Image
+                        src={dirt}
+                        alt="dirt"
+                        loading="lazy"
+                        className="object-fill"
+                    />
+                </div>
+                <div className="stone-block absolute left-[45%] right-[34.9%] top-[19.8%] z-10">
+                    <Image
+                        src={stone}
+                        alt="stone"
+                        loading="lazy"
+                        className="absolute right-0 scale-50"
+                    />
+                </div>
+                <div className="stone-block absolute left-[45%] right-[34.9%] top-[39.8%] z-10">
+                    <Image
+                        src={stone}
+                        alt="stone"
+                        loading="lazy"
+                        className="absolute right-0 scale-50"
+                    />
+                </div>
+                <div className="stone-block absolute left-[45%] right-[34.9%] top-[59.8%] z-10">
+                    <Image
+                        src={stone}
+                        alt="stone"
+                        loading="lazy"
+                        className="absolute right-0 scale-50"
+                    />
+                </div>
+                <div className="dirt-block absolute left-[50%] right-[40%] top-[90%] z-10">
+                    <Image
+                        src={dirt}
+                        alt="dirt"
+                        loading="lazy"
+                        className="object-fill"
+                    />
+                </div>
             </div>
         </div>
         {/* <div className="flex flex-row max-w rounded overflow-hidden shadow-lg justify-center items-center w-4/5 relative">
