@@ -2,7 +2,8 @@
 import icon from '../../../public/Zelda/Zelda.svg';
 import Zelda1 from '../../../public/Zelda/Zelda1.jpg';
 import Zelda2 from '../../../public/Zelda/Zelda2.jpg';
-import Zelda3 from '../../../public/Zelda/Zelda3.jpg'
+import Zelda3 from '../../../public/Zelda/Zelda3.jpg';
+import Zelda4 from '../../../public/Zelda/Zelda4.jpg';
 import Ganondork from '../../../public/Zelda/Ganondork.jpg'
 import Image from 'next/image';
 import { StaticImageData } from 'next/dist/shared/lib/get-img-props';
@@ -12,7 +13,7 @@ function Zelda() {
     const [imgIndex, setImgIndex] = useState(0);
     const [disableRightArrow, setDisableRightArrow] = useState(false);
     const [disableLeftArrow, setDisableLeftArrow] = useState(false);
-    const imgArray:Array<StaticImageData> = [Zelda1, Zelda2, Zelda3, Ganondork];
+    const imgArray:Array<StaticImageData> = [Zelda1, Zelda2, Zelda3, Zelda4, Ganondork];
 
     useEffect(() => {
         if(imgIndex === (imgArray.length - 1)) {
